@@ -109,7 +109,7 @@ h2
 
 .searchfield, .searchbutton, .filtertext, .filterbutton
 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -320,15 +320,15 @@ h2
   font-size: 1.5rem;
 }
 
-.pop-card, .accomodation-card, .activities-card
+.pop-card, .accommodation-card, .activities-card
 {
   transition: 0.2s ease-in-out;
 }
 
-.pop-card:hover, .accomodation-card:hover, .activities-card:hover
+.pop-card:hover, .accommodation-card:hover, .activities-card:hover
 {
   transform: scale(1.02);
-  box-shadow: 0 0 0.5rem #0065fc;
+  box-shadow: 0 0.2rem 0.5rem #0065fc;
 }
 
 .pop-card
@@ -374,7 +374,7 @@ h2
   margin-top: 0.5rem;
 }
 
-.accomodation-card
+.accommodation-card
 {
   height: 12.4375rem;
   width: 15.375rem;
@@ -383,7 +383,7 @@ h2
   margin: 0 0.844rem 1.6875rem 0.844rem;
 }
 
-.accomodation-card img
+.accommodation-card img
 {
   width: 14.75rem;
   height: 7.125rem;
@@ -392,7 +392,7 @@ h2
   margin: 0.3125rem;
 }
 
-.accomodation-card figcaption
+.accommodation-card figcaption
 {
   margin: 0 1rem;
   font-size: 0.85rem;
@@ -400,13 +400,13 @@ h2
   flex-direction: column;
 }
 
-.accomodation-card figcaption h3
+.accommodation-card figcaption h3
 {
   font-weight: 800;
   margin: 0;
 }
 
-.accomodation-card p
+.accommodation-card p
 {
   margin: 0.4rem 0;
 }
@@ -457,29 +457,42 @@ h2
   justify-content: space-between;
 }
 
+.zoom
+{
+  overflow: hidden;
+  border-radius: 0.625rem 0.625rem 0 0;
+  height: 24.375rem;
+}
+
 .activities-card.xlimg img
 {
   height: 24.375rem;
+  transform: scale(1.15) translateY(1.5rem);
 }
 
 .activities-card.largeimg img
 {
   height: 11.25rem;
+  object-position: 50% 40%;
 }
 
 .activities-card.mediumimg img
 {
   height: 9.5rem;
+  
+  object-position: 50% 10%;
 }
 
 .activities-card.smallimg img
 {
   height: 8.75rem;
+  object-position: 50% 0%;
 }
 
 .activities-card.xsmallimg img
 {
   height: 6.875rem;
+  object-position: 50% 20%;
 }
 
 .activities-card figcaption
@@ -488,9 +501,15 @@ h2
   margin: 5%;
 }
 
-.accomodation-card, .pop-card, .activities-card
+.activities-card.xlimg figcaption
 {
-  box-shadow: 0 0 0.5rem lightgray;
+  font-weight: 800;
+  margin: 5.5% 5%;
+}
+
+.accommodation-card, .pop-card, .activities-card
+{
+  box-shadow: 0 0.2rem 0.5rem lightgray;
 }
 
 footer
