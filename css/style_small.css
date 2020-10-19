@@ -1,6 +1,6 @@
 .logo
 {
-  flex: 1;
+  margin: 1.5rem auto auto 1.5rem;
 }
 
 header :nth-child(2)
@@ -46,7 +46,7 @@ nav a
 
 #inscription
 {
-  margin: 2.6875rem 1.3125rem;
+  margin: 2.35rem 1.3125rem;
 }
 
 main
@@ -57,18 +57,24 @@ main
 
 h1
 {
-  margin: 1.25rem 1.5rem 0.5rem 1.25rem;
+  margin: 0.65rem auto 0.5rem 1.25rem;
+}
+
+h2
+{
+  /* margin: 1.25rem 0 0 0; */
+  margin: 5% 0 2.5% 0;
 }
 
 .subtitle
 {
-  margin: 0.5rem 1rem 1rem 1.25rem;
-  font-size: 0.95rem;
+  margin: 0.65rem 1rem 1rem 1.25rem;
+ /*  font-size: 0.95rem; */
 }
 
 .searcharea
 {
-  margin-left: 1.25rem;
+  margin: 2.5rem 1.25rem 2rem 1.25rem;
   width: 20.8125rem
 }
 
@@ -79,8 +85,9 @@ h1
 
 .searchbutton, .searchbutton:active, .searchbutton:focus
 {
-  width: 3.1875rem;
+  width: 4rem;
   border-radius: 0.875rem 0.875rem 0.875rem 0.875rem;
+  margin-right: -0.4rem;
 }
 
 .zoomicon
@@ -95,12 +102,18 @@ h1
 
 .filters
 {
-  margin-left: 1.25rem;
+  margin: 1.25rem auto 1.25rem 1.25rem;
 }
 
 .filterbutton
 {
   margin: 0 0.406rem 0.688rem 0;
+}
+
+.searchfield, .searchbutton, .filtertext, .filterbutton 
+{
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .filtertext
@@ -114,6 +127,11 @@ h1
   margin-left: 1.25rem;
 }
 
+.textinfo
+{
+  line-height: 1.3rem;
+}
+
 .cards
 {
   flex-direction: column;
@@ -124,7 +142,8 @@ h1
   order: 1;
   background-color: #F2F2F2;
   border-radius: 0;
-  width: 100vw;
+  width: 100%;
+  padding: 0;
 }
 
 #accommodations
@@ -132,6 +151,34 @@ h1
   order: 2;
   background-color: unset;
   border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.accommodations-title, .activities-title
+{
+  margin: 9% auto 6% 6%;
+}
+
+.accommodation-cards
+{
+  justify-content: center;
+}
+
+.accommodation-card
+{
+  width: 20.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.accommodation-card img
+{
+  width: 20.3125rem;
+}
+
+.showmore
+{
+  margin: 5%;
 }
 
 #activities
@@ -139,11 +186,21 @@ h1
   order: 3;
 }
 
+.activities-cards
+{
+  justify-content: center;
+  margin: auto;
+}
 
+.pop-card:hover, .accommodation-card:hover, .activities-card:hover
+{
+  transform: none;
+  box-shadow: 0 0 0.5rem lightgray;
+}
 
 .pop-title
 {
-  margin: 2.6875rem;
+  margin: 5%;
 }
 
 .pop-card
@@ -151,8 +208,53 @@ h1
   margin: 1.25rem;
 }
 
+.activities-card
+{
+  width: 20.875rem;
+}
+
+.activities-card img, .activities-card.xlimg img, 
+.activities-card.largeimg img, .activities-card.mediumimg img, 
+.activities-card.smallimg img, .activities-card.xsmallimg img
+{
+  width: 20.875rem;
+  height: 8.375rem;
+  transform: unset;
+}
+
+.activities-card.largeimg img
+{
+  object-position: 50% 42%;
+}
+
+.activities-card.xlimg img
+{
+  object-position: 50% 20%;
+}
+
+.activities-card.smallimg img
+{
+  object-position: 50% 15%;
+}
+
+.activities-card.mediumimg img
+{
+  object-position: 50% 25%;
+}
+
+.zoom
+{
+  height: unset;
+}
+
 footer
 {
   flex-direction: column;
-  
+  margin: 1.5rem auto auto auto;
+  padding: 0.5rem 0 3rem 0.5rem;
+}
+
+footer article
+{
+  margin-top: 1.5rem;
 }
