@@ -11,45 +11,38 @@ html, body
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.disabled-link
-{
-  pointer-events: none;
-}
-
-a, a:visited
+nav a, nav a:visited, footer a, footer a:visited
 {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.active_link a, .active_link a:visited
+nav a:hover, .inscription, .inscription:visited
 {
   color: #0065FC;
 }
 
 header
 {
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
 .logo
 {
   margin: 2.5rem auto 1.25rem 3%;
-  flex: 1;
 }
 
 .logo-img
 {
   width: 6.06rem;
   height: 2.81rem;
+  cursor: pointer;
 }
 
 nav ul
@@ -59,28 +52,33 @@ nav ul
   display: flex;
 }
 
-nav li
+nav a
 {
-  padding: 3.1875rem 2.125rem 1rem 2.125rem;
+  padding: 3.1875rem 2.125rem 0 2.125rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.active_link
-{
-  border-top: 0.125rem solid #0065FC;
-  padding-top: 3.0625rem;
-}
-
-#inscription:visited
+nav a:hover
 {
   color: #0065FC;
+  border-top: 0.125rem solid #0065FC;
+  padding-top: 3.0625rem;
+  height: 3.0625rem;
+  text-align: center;
 }
 
-#inscription
+.inscription
 {
   text-decoration: none;
   font-weight: 800;
   margin: 3.1875rem 4.81rem 0.5rem 2.125rem;
-  color: #0065FC;
+  cursor: pointer;
+}
+
+.inscription:hover
+{
+  text-decoration: underline;
 }
 
 main
@@ -97,9 +95,9 @@ h1
 
 h2
 {
-  font-size: 1.4rem;
-  font-weight: 750;
   margin: 2.5rem auto 1.5rem 0.844rem;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .subtitle
@@ -109,7 +107,7 @@ h2
 
 .searchfield, .searchbutton, .filtertext, .filterbutton
 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif; /* Reinitialized by font awesome, needs to be setup again */
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -130,10 +128,10 @@ h2
 {
   font-size: 1.125rem;
   margin: auto auto auto -0.0625rem;
+  padding: 0.9375rem 1.1875rem;
   background-color:  #F2F2F2;
-  padding: 0.875rem 1.125rem;
   border-radius: 0.8rem 0 0 0.8rem;
-  border: 0.0625rem solid #F2F2F2;
+  
 }
 
 .searchfield
@@ -142,7 +140,6 @@ h2
   height: 3.0625rem;
   border: none;
   padding: 0 0 0 1.0625rem;
-  /* font-weight: 900; */
 }
 
 .searchbutton
@@ -157,24 +154,23 @@ h2
   background-color:#0065FC;
   color: white;
   cursor: pointer;
-  transition:background-color 0.5s, color 0.5s;
+  transition: all 0.5s;
 }
 
 .searchbutton:hover
 {
   color: black;
-  font-weight: 700;
   background-color: #DEEBFF;
 }
 
-.searchbutton:focus, .searchfield:focus, .filterbutton:focus, .filterbutton:focus
+.searchbutton:focus, .searchfield:focus, .filterbutton:focus
 {
-  outline: none;
+  outline: none; /* to remove black border around focused inputs */
 }
 
 .zoomicon
 {
-  display: none;
+  display: none; /* Hidden; to display in mobile mode */
 }
 
 .filters
@@ -215,10 +211,10 @@ h2
 .filterbutton:after
 {
   content: '';
-  z-index: -1;
+  z-index: -1; /* To have blue effect contained in button, hidden overflow */
   position: absolute;
   transition: all 0.5s ease-in-out;
-  width: 0;
+  width: 0; /* Appearing by setting 100% on hover */
   height: 100%;
   top: 0;
   left: 0.5rem;
@@ -266,9 +262,9 @@ h2
   font-size: 0.8rem;
 }
 
-.fa-info::before
+.fa-info:before
 {
-  line-height: 1.55rem;
+  line-height: 1.55rem;  /* Centers font-awesome icon in circle */
 }
 
 .textinfo
@@ -277,23 +273,18 @@ h2
   margin-left: 0.625rem;
 }
 
-.cards
+figure
+{
+  cursor: pointer;
+}
+
+.cards, .pop-title
 {
   display: flex;
   justify-content: space-between;
 }
 
-#accommodations
-{
-  margin: 1rem 3% auto auto;
-}
-
-#popular
-{
-  margin-top: 1rem;
-}
-
-#accommodations, #popular
+.accommodations, .popular
 {
   background-color: #F2F2F2;
   border-radius: 0.875rem;
@@ -301,17 +292,18 @@ h2
   height: fit-content;
 }
 
-.accommodation-cards
+.accommodations
 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  margin: 1rem 3% auto auto;
+}
+
+.popular
+{
+  margin-top: 1rem;
 }
 
 .pop-title
 {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -320,58 +312,23 @@ h2
   font-size: 1.5rem;
 }
 
-.pop-card, .accommodation-card, .activities-card
+.accommodation-cards, .activities-cards
 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.accommodation-card, .pop-card, .activities-card
+{
+  box-shadow: 0 0.2rem 0.5rem lightgray;
   transition: 0.2s ease-in-out;
 }
 
-.pop-card:hover, .accommodation-card:hover, .activities-card:hover
+.accommodation-card:hover, .pop-card:hover, .activities-card:hover
 {
   transform: scale(1.02);
   box-shadow: 0 0.2rem 0.5rem #0065fc;
-}
-
-.pop-card
-{
-  width: 20.875rem;
-  height: 9rem;
-  border-radius: 0.875rem;
-  margin: 0 0.844rem 1.6875rem 0.844rem;
-  background-color: white;
-  display: flex;
-}
-
-.pop-card a
-{
-  display: flex;
-}
-
-.pop-card img
-{
-  width: 7.9375rem;
-  height: 8.375rem;
-  object-fit: cover;
-  margin: 0.3125rem;
-  border-radius: 0.625rem 0 0 0.625rem;
-}
-
-.pop-card figcaption
-{
-  margin: 1rem;
-  font-size: 0.85rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.pop-card figcaption h3
-{
-  font-weight: 800;
-  margin: 0;
-}
-
-.pop-card p
-{
-  margin-top: 0.5rem;
 }
 
 .accommodation-card
@@ -400,7 +357,7 @@ h2
   flex-direction: column;
 }
 
-.accommodation-card figcaption h3
+.accommodation-card h3
 {
   font-weight: 800;
   margin: 0;
@@ -411,6 +368,44 @@ h2
   margin: 0.4rem 0;
 }
 
+.pop-card
+{
+  width: 20.875rem;
+  height: 9rem;
+  border-radius: 0.875rem;
+  margin: 0 0.844rem 1.6875rem 0.844rem;
+  background-color: white;
+  display: flex;
+}
+
+.pop-card img
+{
+  width: 7.9375rem;
+  height: 8.375rem;
+  object-fit: cover;
+  margin: 0.3125rem;
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.pop-card figcaption
+{
+  margin: 1rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-card h3
+{
+  font-weight: 800;
+  margin: 0;
+}
+
+.pop-card p
+{
+  margin-top: 0.5rem;
+}
+
 .figstars
 {
   margin-top: auto;
@@ -419,7 +414,7 @@ h2
 
 .figstars .off
 {
-  color: #F2F2F2;
+  color: #F2F2F2; /* additional class to pass specific stars to a light gray */
 }
 
 .showmore
@@ -429,11 +424,13 @@ h2
   width: fit-content;
 }
 
+.activities-title
+{
+  margin-left: 0;
+}
+
 .activities-cards
 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   margin: 0 -0.844rem
 }
 
@@ -459,17 +456,17 @@ h2
   justify-content: space-between;
 }
 
+.activities-card.xlimg img
+{
+  height: 24.375rem;
+  transform: scale(1.15) translateY(1.5rem);
+}
+
 .zoom
 {
   overflow: hidden;
   border-radius: 0.625rem 0.625rem 0 0;
   height: 24.375rem;
-}
-
-.activities-card.xlimg img
-{
-  height: 24.375rem;
-  transform: scale(1.15) translateY(1.5rem);
 }
 
 .activities-card.largeimg img
@@ -481,7 +478,6 @@ h2
 .activities-card.mediumimg img
 {
   height: 9.5rem;
-  
   object-position: 50% 10%;
 }
 
@@ -500,18 +496,7 @@ h2
 .activities-card figcaption
 {
   font-weight: 800;
-  margin: 5%;
-}
-
-.activities-card.xlimg figcaption
-{
-  font-weight: 800;
-  margin: 5.5% 5%;
-}
-
-.accommodation-card, .pop-card, .activities-card
-{
-  box-shadow: 0 0.2rem 0.5rem lightgray;
+  padding: 1rem;
 }
 
 footer
@@ -532,8 +517,6 @@ footer a
 {
   display: block;
   margin-top: 0.7rem;
-  
-  cursor: pointer;
   width: fit-content;
 }
 

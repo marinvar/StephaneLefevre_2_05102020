@@ -1,0 +1,88 @@
+.logo
+{
+  margin: 1.5rem auto auto 1.5rem;
+}
+
+header :nth-child(2)
+{
+  order: 3;
+}
+
+header :nth-child(3)
+{
+  order: 2;
+}
+
+nav
+{
+  width: 100%;
+}
+
+nav ul
+{
+  padding: 0 0 1.25rem 0;
+}
+
+nav li
+{
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  display: flex;
+}
+
+nav a
+{
+  flex: 1;
+  padding: 0 0 1.0625rem 0;
+  border-bottom: 0.1875rem solid #F2F2F2;
+
+
+}
+
+nav a:hover
+{
+  border-top: unset;
+  border-bottom: 0.1875rem solid #0065FC;
+  padding: 0 0 0.875rem 0;
+  height: unset;
+}
+
+.inscription
+{
+  margin: 2.35rem 1.3125rem;
+}
+
+.cards
+{
+flex-direction: column;
+}
+
+.popular
+{
+  order: 1;
+  margin-bottom: 2rem;
+}
+
+.accommodations
+{
+  order: 2;
+  margin: 0;
+}
+
+.fa-chart-line
+{
+  margin-right: 1rem;
+}
+
+.searchfield, .searchbutton, .filtertext, .filterbutton 
+{
+  font-size: 1rem;
+}
+
+.pop-cards
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
