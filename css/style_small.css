@@ -44,7 +44,7 @@ h2
 
 .searchtext
 {
-  display: none;
+  display: none; /* To hide button text and only show icon */
 }
 
 .filters
@@ -115,11 +115,6 @@ h2
 .showmore
 {
   margin: 5%;
-}
-
-.activities
-{
-  order: 3;
 }
 
 .activities-cards

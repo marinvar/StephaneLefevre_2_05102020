@@ -95,9 +95,9 @@ h1
 
 h2
 {
+  margin: 2.5rem auto 1.5rem 0.844rem;
   font-size: 1.4rem;
   font-weight: 700;
-  margin: 2.5rem auto 1.5rem 0.844rem;
 }
 
 .subtitle
@@ -107,7 +107,7 @@ h2
 
 .searchfield, .searchbutton, .filtertext, .filterbutton
 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif; /* Reinitialized by font awesome, needs to be setup again */
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -128,8 +128,8 @@ h2
 {
   font-size: 1.125rem;
   margin: auto auto auto -0.0625rem;
-  background-color:  #F2F2F2;
   padding: 0.9375rem 1.1875rem;
+  background-color:  #F2F2F2;
   border-radius: 0.8rem 0 0 0.8rem;
   
 }
@@ -165,12 +165,12 @@ h2
 
 .searchbutton:focus, .searchfield:focus, .filterbutton:focus
 {
-  outline: none;
+  outline: none; /* to remove black border around focused inputs */
 }
 
 .zoomicon
 {
-  display: none;
+  display: none; /* Hidden; to display in mobile mode */
 }
 
 .filters
@@ -211,10 +211,10 @@ h2
 .filterbutton:after
 {
   content: '';
-  z-index: -1;
+  z-index: -1; /* To have blue effect contained in button, hidden overflow */
   position: absolute;
   transition: all 0.5s ease-in-out;
-  width: 0;
+  width: 0; /* Appearing by setting 100% on hover */
   height: 100%;
   top: 0;
   left: 0.5rem;
@@ -264,7 +264,7 @@ h2
 
 .fa-info:before
 {
-  line-height: 1.55rem;
+  line-height: 1.55rem;  /* Centers font-awesome icon in circle */
 }
 
 .textinfo
@@ -276,13 +276,6 @@ h2
 figure
 {
   cursor: pointer;
-}
-
-.zoom
-{
-  overflow: hidden;
-  border-radius: 0.625rem 0.625rem 0 0;
-  height: 24.375rem;
 }
 
 .cards, .pop-title
@@ -421,7 +414,7 @@ figure
 
 .figstars .off
 {
-  color: #F2F2F2;
+  color: #F2F2F2; /* additional class to pass specific stars to a light gray */
 }
 
 .showmore
@@ -467,6 +460,13 @@ figure
 {
   height: 24.375rem;
   transform: scale(1.15) translateY(1.5rem);
+}
+
+.zoom
+{
+  overflow: hidden;
+  border-radius: 0.625rem 0.625rem 0 0;
+  height: 24.375rem;
 }
 
 .activities-card.largeimg img
