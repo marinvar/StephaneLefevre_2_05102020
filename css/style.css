@@ -289,7 +289,7 @@ figure
   background-color: #F2F2F2;
   border-radius: 0.875rem;
   padding: 0 2% ;
-  height: fit-content;
+  height: max-content;
 }
 
 .accommodations
@@ -421,7 +421,7 @@ figure
 {
   margin: 2%;
   cursor: pointer;
-  width: fit-content;
+  width: max-content;
 }
 
 .activities-title
@@ -437,7 +437,7 @@ figure
 .activities-card
 {
   width: 18.875rem;
-  height: fit-content;
+  height: max-content;
   border-radius: 0.625rem;
   margin: 0 0.844rem 1.6875rem 0.844rem;
 }
@@ -518,6 +518,7 @@ footer a
   display: block;
   margin-top: 0.7rem;
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 footer a:hover
