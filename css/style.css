@@ -208,7 +208,7 @@ h2
   align-items: center;
 }
 
-.filterbutton:after
+.filterbutton::after
 {
   content: '';
   z-index: -1; /* To have blue effect contained in button, hidden overflow */
@@ -222,7 +222,7 @@ h2
   border-radius: 1.25rem;
 }
 
-.filterbutton:hover:after
+.filterbutton:hover::after
 {
   width: 100%;
 }
@@ -238,7 +238,7 @@ h2
   margin-right: auto;
 }
 
-.fa-dog:before, .fa-heart:before, .fa-child:before, .fa-money-bill-wave:before
+.fa-dog::before, .fa-heart::before, .fa-child::before, .fa-money-bill-wave::before
 {
   line-height: 3.25rem; /* Centers font-awesome icon in circle */
 }
@@ -262,7 +262,7 @@ h2
   font-size: 0.8rem;
 }
 
-.fa-info:before
+.fa-info::before
 {
   line-height: 1.55rem;  /* Centers font-awesome icon in circle */
 }
