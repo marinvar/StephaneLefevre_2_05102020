@@ -61,7 +61,6 @@ nav a
 
 nav a:hover
 {
-  color: #0065FC;
   border-top: 0.125rem solid #0065FC;
   padding-top: 3.0625rem;
   height: 3.0625rem;
@@ -521,7 +520,7 @@ footer a
   width: -moz-fit-content;
 }
 
-footer a:hover
+footer a:hover, .showmore:hover
 {
   text-decoration: underline;
   color: #0065FC;
